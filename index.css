@@ -36,7 +36,6 @@ body {
 
 .container .create-content {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     flex-grow: 1;
