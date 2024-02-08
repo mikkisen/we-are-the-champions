@@ -13,23 +13,12 @@ body {
     justify-content: center;
 }
 
-.container .welcome-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    box-sizing: border-box;
-    height: 10vh;
-}
-
 .container .welcome-content img {
-    height: 80%;
+    height: 150px;
+    width: 150px;
 }
 
 .container .create-content {
     display: flex;
     flex-wrap: wrap;
-}
-
-.container .create-content #text-input {
-    flex: 1 0;
 }
