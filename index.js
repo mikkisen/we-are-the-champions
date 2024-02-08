@@ -24,14 +24,18 @@ publishBtn.addEventListener("click", function () {
 
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
-        let endorsementID = snapshot.val()[0]
+        let endorsementArray = Object.entries(snapshot.val())
+        let endorsementID = endorsementArray[0]
+        let endorsementItems = endorsementArray[1]
 
+
+        console.log(endorsementItems)
         console.log(endorsementID)
 
     }
 })
 
-function createEndorsement(text, from, to) {
+function createEndorsement(from, text, to) {
     let endorsementArray = [from, text, to, 0]
     const heartIcon = `<i class="fas fa-heart"></i>`
     push(endorsementListDatabase, endorsementArray)
