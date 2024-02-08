@@ -19,6 +19,7 @@ body {
     align-items: center;
     margin: 40px 20px;
     box-sizing: border-box;
+    width: 80%;
 }
 
 .container .welcome-content {
@@ -26,7 +27,6 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 80%;
     color: white;
 }
 
