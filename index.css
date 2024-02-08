@@ -83,6 +83,7 @@ body {
     background-color: #28a9f1;
     color: #04131c;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .container .publised-content {
@@ -107,7 +108,7 @@ body {
     flex: 1;
     width: 100%;
     padding: 10px;
-    border-radius: 10px;
+    text-align: left;
     margin-bottom: 10px;
     overflow: auto;
     box-sizing: border-box;
