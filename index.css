@@ -32,10 +32,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 10px;
+    flex-grow: 1;
 }
 
 .container .create-content #text-input {
-    flex: 1 0;
+    height: 350px;
 }
 
 .container .publised-content {
