@@ -8,7 +8,7 @@ body {
 }
 
 #text-input::placeholder {
-    text-align: right;
+    text-align: left;
     vertical-align: top;
 }
 
@@ -18,6 +18,7 @@ body {
     justify-content: center;
     margin: 40px 20px;
     box-sizing: border-box;
+    width: 60%;
 }
 
 .container .welcome-content {
@@ -44,24 +45,26 @@ body {
 .container .create-content #text-input {
     width: 100%;
     height: 200px;
-    padding: 0 5px;
+    padding: 10px 0;
     box-sizing: border-box;
 }
 
 .container .create-content #from-input {
     width: 50%;
     box-sizing: border-box;
+    padding: 10px 0;
 }
 
-.container .create-content #from-input {
+.container .create-content #to-input {
     width: 50%;
     box-sizing: border-box;
-    padding: 0 5px;
+    padding: 10px 0;
 }
 
 .container .create-content button {
     width: 100%;
     box-sizing: border-box;
+    padding: 10px 0;
 }
 
 .container .publised-content {
