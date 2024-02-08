@@ -42,10 +42,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
 }
 
 .container .publised-content ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .container .publised-content ul li {
