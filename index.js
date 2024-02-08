@@ -24,10 +24,12 @@ publishBtn.addEventListener("click", function () {
 
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
-        let endorsementListItems = Object.entries(snapshot.val())
-        for (let i = 0; i < endorsementListItems.length; i++) {
-            console.log(endorsementListItems[i])
-        }
+        let endorsementID = snapshot.val()[0]
+        let endorsementArray = Object.entries(snapshot.val()[1])
+
+        console.log(endorsementID)
+        console.log(endorsementArray)
+
     }
 })
 
