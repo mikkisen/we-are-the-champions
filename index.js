@@ -28,16 +28,6 @@ onValue(endorsementListDatabase, function (snapshot) {
         let endorsementArray = Object.entries(snapshot.val())
 
         for (let i = 0; i < endorsementArray.length; i++) {
-            let endorsementID = endorsementArray[i][0]
-            let endorsementItems = endorsementArray[i][1]
-            console.log(endorsementItems)
-            console.log(endorsementID)
-
-            let fromItem = endorsementItems[0]
-            let textItem = endorsementItems[1]
-            let toItem = endorsementItems[2]
-
-            createEndorsement(fromItem, textItem, toItem)
         }
 
     }
