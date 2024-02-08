@@ -6,8 +6,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 #text-input::placeholder {
@@ -55,6 +53,9 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    border-radius: 10px;
+    background-color: #444059;
+    color: #8f8f8f;
 }
 
 .container .create-content textarea {
