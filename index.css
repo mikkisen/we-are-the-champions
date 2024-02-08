@@ -48,6 +48,7 @@ body {
 .container .create-content button {
     width: 100%;
     padding: 10px;
+    font-size: 18px;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
@@ -65,7 +66,6 @@ body {
 .container .create-content .input-group>input {
     flex: 1;
     padding: 10px 5px;
-    font-size: 18px;
     box-sizing: border-box;
 }
 
