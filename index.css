@@ -27,6 +27,7 @@ body {
     text-align: center;
     align-items: center;
     color: white;
+    font-size: 20px;
 }
 
 .container .welcome-content img {
@@ -88,13 +89,13 @@ body {
     width: 100%;
     color: white;
     text-align: center;
+    font-size: 32px;
 }
 
 .container .publised-content ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
     padding-left: 0;
     box-sizing: border-box;
