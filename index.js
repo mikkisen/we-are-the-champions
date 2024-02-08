@@ -19,6 +19,10 @@ publishBtn.addEventListener("click", function () {
     let text = textInput.value
     let from = fromInput.value
     let to = toInput.value
+
+
+    let endorsementArray = [from, text, to, 0]
+    push(endorsementListDatabase, endorsementArray)
     createEndorsement(text, from, to)
 })
 
@@ -28,6 +32,13 @@ onValue(endorsementListDatabase, function (snapshot) {
         let endorsementArray = Object.entries(snapshot.val())
 
         for (let i = 0; i < endorsementArray.length; i++) {
+            let endorsementID = endorsementArray[i][0]
+            let endorsementItems = endorsementArray[i][1]
+
+            let fromItem = endorsementItems[0]
+            let textItem = endorsementItems[1]
+            let toItem = endorsementItems[2]
+            createEndorsement(fromItem, textItem, toItem)
         }
 
     }
@@ -38,9 +49,7 @@ function clearEndorsements() {
 }
 
 function createEndorsement(from, text, to) {
-    let endorsementArray = [from, text, to, 0]
     const heartIcon = `<i class="fas fa-heart"></i>`
-    push(endorsementListDatabase, endorsementArray)
 
     // Lager listen
     let endorsementList = document.createElement("li")
