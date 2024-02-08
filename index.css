@@ -13,6 +13,14 @@ body {
     justify-content: center;
 }
 
+.container .welcome-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
 .container .welcome-content img {
     height: 150px;
     width: 150px;
