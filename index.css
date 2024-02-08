@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    width: 80%;
     color: white;
 }
 
@@ -49,6 +50,7 @@ body {
     padding: 10px;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .container .create-content textarea {
