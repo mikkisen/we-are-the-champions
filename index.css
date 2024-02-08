@@ -37,7 +37,12 @@ body {
 }
 
 .container .create-content #text-input {
+    flex: 1 0;
     height: 350px;
+}
+
+.container .create-content button {
+    flex: 1 0;
 }
 
 .container .publised-content {
