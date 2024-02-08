@@ -18,10 +18,6 @@ body {
 .container .welcome-content {
     display: flex;
     flex-direction: column;
-    height: 10vh;
     text-align: center;
-}
-
-.container .welcome-content img {
-    height: 80%;
+    box-sizing: border-box;
 }
