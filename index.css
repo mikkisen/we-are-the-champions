@@ -5,6 +5,8 @@ body {
     background-color: #1b1924;
     font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
+    margin: 40px auto;
+    box-sizing: border-box;
 }
 
 #text-input::placeholder {
@@ -18,8 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     width: 40%;
-    margin: 40px auto;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .container .welcome-content {
