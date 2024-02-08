@@ -36,36 +36,38 @@ body {
 
 .container .create-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     gap: 10px;
-    flex-grow: 1;
+}
+
+.container .create-content textarea,
+.container .create-content input,
+.container .create-content button {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container .create-content textarea {
-    height: 250px;
-    padding: 10px 5px;
-    box-sizing: border-box;
-    font-size: 18px;
-    vertical-align: top;
+    height: 200px;
 }
 
-.container .create-content button,
-.container .create-content textarea,
-.container .create-content input {
-    font-family: 'Josefin Sans', sans-serif;
+.container .create-content .input-group {
+    display: flex;
+    gap: 10px;
 }
 
-.container .create-content #from-input,
-.container .create-content #to-input {
+.container .create-content .input-group>input {
     flex: 1;
-    min-width: 0;
     padding: 10px 5px;
     font-size: 18px;
     box-sizing: border-box;
 }
 
 .container .create-content button {
-    box-sizing: border-box;
     padding: 10px 0;
     font-size: 20px;
 }
