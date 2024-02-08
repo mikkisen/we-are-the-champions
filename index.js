@@ -23,6 +23,7 @@ publishBtn.addEventListener("click", function () {
 })
 
 onValue(endorsementListDatabase, function (snapshot) {
+    clearEndorsements()
     if (snapshot.exists()) {
         let endorsementArray = Object.entries(snapshot.val())
 
@@ -31,10 +32,20 @@ onValue(endorsementListDatabase, function (snapshot) {
             let endorsementItems = endorsementArray[i][1]
             console.log(endorsementItems)
             console.log(endorsementID)
+
+            let fromItem = endorsementItems[0]
+            let textItem = endorsementItems[1]
+            let toItem = endorsementItems[2]
+
+            createEndorsement(fromItem, textItem, toItem)
         }
 
     }
 })
+
+function clearEndorsements() {
+    endorsementsList.innerHTML = ""
+}
 
 function createEndorsement(from, text, to) {
     let endorsementArray = [from, text, to, 0]
