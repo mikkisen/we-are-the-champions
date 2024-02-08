@@ -94,7 +94,7 @@ body {
 }
 
 .container .published-content .input-group {
-    flex-grow: 1;
+    height: 300px;
     overflow: auto;
 }
 
