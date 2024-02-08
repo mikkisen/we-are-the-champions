@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: auto;
 }
 
 .container {
@@ -99,6 +98,13 @@ body {
     max-height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.container .published-content .endorsements-list::-webkit-scrollbar {
+    display: none;
 }
 
 .container .published-content ul {
