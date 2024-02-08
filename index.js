@@ -27,7 +27,6 @@ onValue(endorsementListDatabase, function (snapshot) {
         let endorsementID = snapshot.val()[0]
 
         console.log(endorsementID)
-        console.log(endorsementArray)
 
     }
 })
