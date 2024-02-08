@@ -24,11 +24,17 @@ publishBtn.addEventListener("click", function () {
 
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
+        let endorsementListItems = Object.entries(snapshot.val())
+        console.log(endorsementListItems)
+        for (let i = 0; i < endorsementListItems; i++) {
+
+        }
     }
 })
 
 function createEndorsement(text, from, to) {
-    let endorsementArray = [from, text, to]
+    let endorsementArray = [from, text, to, 0]
+    const heartIcon = `<i class="fas fa-heart"></i>`
     push(endorsementListDatabase, endorsementArray)
 
     // Lager listen
@@ -48,7 +54,7 @@ function createEndorsement(text, from, to) {
 
     //Lager from
     let endorsementLikes = document.createElement("p")
-    endorsementLikes.textContent = `<i class="fas fa-heart"></i> 0`
+    endorsementLikes.innerHTML = `${heartIcon} 0`
 
     //Legger alt inn i listen
     endorsementList.append(endorsementTo)
