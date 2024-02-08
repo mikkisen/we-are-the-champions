@@ -26,7 +26,7 @@ onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
         let endorsementArray = Object.entries(snapshot.val())
         let endorsementID = endorsementArray[0][0]
-        let endorsementItems = endorsementArray[1]
+        let endorsementItems = endorsementArray[0][1]
 
 
         console.log(endorsementItems)
