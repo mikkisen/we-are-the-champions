@@ -94,8 +94,9 @@ body {
 }
 
 .container .published-content .input-group {
-    height: 300px;
-    overflow: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container .published-content ul {
