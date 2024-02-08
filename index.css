@@ -12,6 +12,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 .container .welcome-content {
