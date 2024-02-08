@@ -93,7 +93,7 @@ body {
     font-size: 18px;
 }
 
-.container .published-content .input-group {
+.container .published-content .endorsements-list {
     max-height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
