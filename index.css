@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1b1924;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
 }
 
@@ -22,8 +22,8 @@ body {
 }
 
 .container .welcome-content img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 
 .container .create-content {
