@@ -28,7 +28,6 @@ body {
     align-items: center;
     color: white;
     font-size: 20px;
-    overflow: hidden;
 }
 
 .container .welcome-content img {
@@ -42,7 +41,6 @@ body {
     align-items: stretch;
     width: 100%;
     gap: 10px;
-    overflow: hidden;
 }
 
 .container .create-content textarea,
@@ -88,15 +86,19 @@ body {
     font-weight: bold;
 }
 
-.container .publised-content {
+.container .published-content {
     width: 100%;
     color: white;
     text-align: center;
     font-size: 18px;
+}
+
+.container .published-content .input-group {
+    flex-grow: 1;
     overflow: auto;
 }
 
-.container .publised-content ul {
+.container .published-content ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -105,7 +107,7 @@ body {
     box-sizing: border-box;
 }
 
-.container .publised-content ul li {
+.container .published-content ul li {
     background-color: white;
     color: #04131c;
     flex: 1;
