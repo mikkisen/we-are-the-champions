@@ -18,6 +18,11 @@ body {
     flex-direction: column;
     text-align: center;
     box-sizing: border-box;
+    height: 10vh;
+}
+
+.container .welcome-content img {
+    height: 80%;
 }
 
 .container .create-content {
