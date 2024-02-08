@@ -23,7 +23,7 @@ publishBtn.addEventListener("click", function () {
 
     let endorsementArray = [from, text, to, 0]
     push(endorsementListDatabase, endorsementArray)
-    createEndorsement(text, from, to)
+    clearEndorsements()
 })
 
 onValue(endorsementListDatabase, function (snapshot) {
