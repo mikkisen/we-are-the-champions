@@ -56,6 +56,7 @@ body {
     border-radius: 10px;
     background-color: #444059;
     color: #8f8f8f;
+    border: none;
 }
 
 .container .create-content textarea {
@@ -71,11 +72,14 @@ body {
     flex: 1;
     padding: 10px 5px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .container .create-content button {
     padding: 10px 0;
     font-size: 20px;
+    background-color: #28a9f1;
+    color: #04131c;
 }
 
 .container .publised-content {
