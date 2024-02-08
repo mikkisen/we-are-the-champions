@@ -5,6 +5,8 @@ body {
     background-color: #1b1924;
     font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #text-input::placeholder {
