@@ -51,16 +51,13 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.container .create-content #from-input {
-    box-sizing: border-box;
-    padding: 10px 5px;
-    font-size: 18px;
-}
-
+.container .create-content #from-input,
 .container .create-content #to-input {
-    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
     padding: 10px 5px;
     font-size: 18px;
+    box-sizing: border-box;
 }
 
 .container .create-content button {
