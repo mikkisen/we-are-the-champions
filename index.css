@@ -43,12 +43,17 @@ body {
 }
 
 .container .create-content textarea {
-    height: 200px;
+    height: 250px;
     padding: 10px 5px;
     box-sizing: border-box;
     font-size: 18px;
     vertical-align: top;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.container .create-content button,
+.container .create-content textarea {
+    flex: 2;
 }
 
 .container .create-content #from-input,
