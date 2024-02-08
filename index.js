@@ -23,7 +23,7 @@ publishBtn.addEventListener("click", function () {
 
     let endorsementArray = [from, text, to, 0]
     push(endorsementListDatabase, endorsementArray)
-    clearEndorsements()
+    clearInputFields(from, text, to)
 })
 
 onValue(endorsementListDatabase, function (snapshot) {
@@ -43,6 +43,12 @@ onValue(endorsementListDatabase, function (snapshot) {
 
     }
 })
+
+function clearInputFields(from, text, to) {
+    text.textContent = ""
+    from.textContent = ""
+    to.textContent = ""
+}
 
 function clearEndorsements() {
     endorsementsList.innerHTML = ""
