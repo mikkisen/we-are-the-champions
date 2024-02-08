@@ -52,9 +52,10 @@ function createEndorsement(text, from, to) {
     endorsementLikes.textContent = `${heartIcon} 0`
 
     //Legger alt inn i listen
-    endorsementTo.append(endorsementList)
-    endorsementText.append(endorsementList)
-    endorsementFrom.append(endorsementList)
+    endorsementList.append(endorsementTo)
+    endorsementList.append(endorsementText)
+    endorsementList.append(endorsementFrom)
+    endorsementList.append(endorsementLikes)
     //Legger listen inn i UL
     endorsementsList.append(endorsementList)
 }
