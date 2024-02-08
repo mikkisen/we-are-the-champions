@@ -25,7 +25,6 @@ publishBtn.addEventListener("click", function () {
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
         let endorsementID = snapshot.val()[0]
-        let endorsementArray = Object.entries(snapshot.val()[1])
 
         console.log(endorsementID)
         console.log(endorsementArray)
