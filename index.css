@@ -115,6 +115,7 @@ body {
     width: 100%;
     padding-left: 0;
     box-sizing: border-box;
+    gap: 10px;
 }
 
 .container .published-content ul li {
@@ -122,11 +123,10 @@ body {
     color: #04131c;
     flex: 1;
     width: 100%;
-    padding: 10px;
     text-align: left;
-    margin-bottom: 10px;
     overflow: auto;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
