@@ -97,8 +97,8 @@ body {
 }
 
 .container .published-content .endorsements {
-    background-color: white;
-    color: #04131c;
+    background-color: #444059;
+    color: #8f8f8f;
     flex: 1;
     width: 100%;
     text-align: left;
@@ -107,6 +107,12 @@ body {
     border-radius: 10px;
     height: 300px;
     padding: 5px;
+}
+
+.container .published-content .endorsements button {
+    background-color: #444059;
+    color: #8f8f8f;
+    border-color: 1px solid #8f8f8f;
 }
 
 .container .published-content .button-group {
