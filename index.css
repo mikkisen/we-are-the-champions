@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .container {
@@ -20,7 +19,6 @@ body {
     width: 80%;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .container .welcome-content {
@@ -101,10 +99,6 @@ body {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
-}
-
-.container .published-content .endorsements-list::-webkit-scrollbar {
-    display: none;
 }
 
 .container .published-content ul {

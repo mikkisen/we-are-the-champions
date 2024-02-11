@@ -90,3 +90,19 @@ function getLikedEndorsement(e) {
     // Localstorage
     // getDifferentLocalStorages
 }
+
+//Scrolling endorsements
+const container = document.querySelector('.endorsements');
+let items = document.querySelectorAll('.endorsements li');
+
+container.addEventListener('scroll', () => {
+    let activeIndex = Math.round(container.scrollLeft / container.offsetWidth);
+
+    items.forEach((item, index) => {
+        if (index === activeIndex) {
+            item.style.display = 'block'; // Show the active item
+        } else {
+            item.style.display = 'none'; // Hide other items
+        }
+    });
+});
