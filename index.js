@@ -17,14 +17,9 @@ const publishBtn = document.getElementById("publish-btn")
 
 let currentIndex = 0
 let endorsementArray = []
-let likeBtn = document.getElementById("like-btn")
 const endorsements = document.getElementById("endorsements")
 const backBtn = document.getElementById("back-btn")
 const nextBtn = document.getElementById("next-btn")
-
-likeBtn.addEventListener("click", () => {
-    console.log("Hello!")
-})
 
 backBtn.addEventListener("click", (snapshot) => {
     if (endorsementArray) {
