@@ -93,7 +93,7 @@ function getLikedEndorsement(e) {
 
 //Scrolling endorsements
 const container = document.querySelector('.endorsements');
-let items = document.querySelectorAll('.endorsements li');
+let items = document.querySelectorAll('#endorsements-list li');
 
 container.addEventListener('scroll', () => {
     // Determine the active item based on the scroll position
