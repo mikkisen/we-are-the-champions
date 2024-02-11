@@ -53,13 +53,13 @@ publishBtn.addEventListener("click", function () {
 endorsements.addEventListener("dblclick", function () {
     let endorsementID = endorsementArray[currentIndex][0]
     if (!localStorage.getItem(`${endorsementID}`)) {
-        localStorage.setItem(endorsementID, +1)
+        localStorage.setItem(endorsementID, 1)
         incrementValueAtPath(endorsementID)
         renderEndorsement()
-
     } else {
         console.log("Already added like to item")
     }
+    console.log("Double click!")
 })
 
 function incrementValueAtPath(endorsementID) {
