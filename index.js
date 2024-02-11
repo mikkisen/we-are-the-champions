@@ -13,7 +13,27 @@ const textInput = document.getElementById("text-input")
 const fromInput = document.getElementById("from-input")
 const toInput = document.getElementById("to-input")
 const publishBtn = document.getElementById("publish-btn")
+
+
+let currentIndex = 0
+let endorsementArray = []
 const endorsements = document.getElementById("endorsements")
+const backBtn = document.getElementById("back-btn")
+const nextBtn = document.getElementById("next-btn")
+
+backBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--
+        renderEndorsement()
+    }
+})
+
+nextBtn.addEventListener("click", () => {
+    if (currentIndex < items.length - 1) {
+        currentIndex++
+        renderEndorsement()
+    }
+})
 
 publishBtn.addEventListener("click", function () {
     let text = textInput.value
@@ -23,25 +43,14 @@ publishBtn.addEventListener("click", function () {
 
     let endorsementArray = [from, text, to, 0]
     push(endorsementListDatabase, endorsementArray)
-    clearInputFields(fromInput, textInput, toInput)
 })
 
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
-        let endorsementArray = Object.entries(snapshot.val())
-
-        for (let i = 0; i < endorsementArray.length; i++) {
-            let endorsementID = endorsementArray[i][0]
-            let endorsementItems = endorsementArray[i][1]
-
-            let fromItem = endorsementItems[0]
-            let textItem = endorsementItems[1]
-            let toItem = endorsementItems[2]
-            showEndorsement(fromItem, textItem, toItem)
-        }
-
+        endorsementArray = Object.entries(snapshot.val())
     } else {
-        console.log("onValue works")
+        clearEndorsement()
+
         let noEndorsements = document.createElement("p")
         noEndorsements.textContent = "No endorsements added"
 
@@ -49,49 +58,20 @@ onValue(endorsementListDatabase, function (snapshot) {
     }
 })
 
+function renderEndorsement() {
+    clearEndorsement()
+    let endorsementID = endorsementArray[currentIndex][0]
+    let endorsementItems = endorsementArray[currentIndex][1]
 
-
-function clearInputFields(from, text, to) {
-    text.textContent = ""
-    from.textContent = ""
-    to.textContent = ""
+    return `<p>From ${endorsementItems[0]}</p>
+    <p>${endorsementItems[1]}</p>
+    <p>To ${endorsementItems[2]}</p>
+    <p>ID: ${endorsementID} <i class="fas fa-heart"></i>${endorsementItems[3]}</p>`
 }
 
-function clearEndorsements() {
-    endorsementsList.innerHTML = ""
+function clearEndorsement() {
+    endorsements.innerHTML = ""
 }
-
-function createEndorsement(from, text, to) {
-    const heartIcon = `<i class="fas fa-heart"></i>`
-
-    // Lager listen
-    let endorsementList = document.createElement("li")
-
-    //Lager to
-    let endorsementTo = document.createElement("p")
-    endorsementTo.textContent = `To ${to}`
-
-    //Lager text
-    let endorsementText = document.createElement("p")
-    endorsementText.textContent = `${text}`
-
-    //Lager from
-    let endorsementFrom = document.createElement("p")
-    endorsementFrom.textContent = `From ${from}`
-
-    //Lager from
-    let endorsementLikes = document.createElement("p")
-    endorsementLikes.innerHTML = `${heartIcon} 0`
-
-    //Legger alt inn i listen
-    endorsementList.append(endorsementTo)
-    endorsementList.append(endorsementText)
-    endorsementList.append(endorsementFrom)
-    endorsementList.append(endorsementLikes)
-    //Legger listen inn i UL
-    endorsementsList.append(endorsementList)
-}
-
 
 function getLikedEndorsement(e) {
     // Localstorage
