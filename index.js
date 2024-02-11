@@ -50,6 +50,37 @@ publishBtn.addEventListener("click", function () {
     push(endorsementListDatabase, endorsementArray)
 })
 
+endorsements.addEventListener("dblclick", function () {
+    if (!localStorage.getItem(`${currentIndex}`)) {
+        localStorage.setItem(currentIndex, +1)
+        let endorsementID = endorsementArray[currentIndex][0]
+        incrementValueAtPath(endorsementID)
+        renderEndorsement()
+    } else {
+        console.log("Already added like to item")
+    }
+})
+
+function incrementValueAtPath(endorsementID) {
+    const path = `endorsements/${endorsementID}/3`; // Adjust the path as needed
+    const dbRef = ref(database, path);
+
+    get(dbRef).then((snapshot) => {
+        if (snapshot.exists()) {
+            const currentCount = snapshot.val() || 0; // Default to 0 if not set
+            const newCount = currentCount + 1;
+            // Update the value in the database
+            set(dbRef, newCount);
+        } else {
+            console.log("No data available at path:", path);
+            // Initialize the count if it doesn't exist
+            set(dbRef, 1);
+        }
+    }).catch((error) => {
+        console.error("Firebase read failed:", error);
+    });
+}
+
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
         endorsementArray = Object.entries(snapshot.val())
@@ -87,9 +118,4 @@ function renderEndorsement() {
 
 function clearEndorsement() {
     endorsements.innerHTML = ""
-}
-
-function getLikedEndorsement(e) {
-    // Localstorage
-    // getDifferentLocalStorages
 }
