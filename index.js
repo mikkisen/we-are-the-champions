@@ -96,8 +96,21 @@ const container = document.querySelector('.endorsements');
 let items = document.querySelectorAll('.endorsements li');
 
 container.addEventListener('scroll', () => {
-    let activeIndex = Math.round(container.scrollLeft / container.offsetWidth);
+    // Determine the active item based on the scroll position
+    let activeIndex = -1;
+    let containerScrollPosition = container.scrollLeft + container.offsetWidth / 2; // Middle of the container
 
+    items.forEach((item, index) => {
+        let itemLeftEdge = item.offsetLeft;
+        let itemRightEdge = itemLeftEdge + item.offsetWidth;
+
+        // Check if the item's center is within the container's visible area
+        if (itemLeftEdge < containerScrollPosition && itemRightEdge > containerScrollPosition) {
+            activeIndex = index;
+        }
+    });
+
+    // Update visibility based on the active index
     items.forEach((item, index) => {
         if (index === activeIndex) {
             item.style.display = 'block'; // Show the active item
