@@ -26,6 +26,8 @@ publishBtn.addEventListener("click", function () {
     clearInputFields(fromInput, textInput, toInput)
 })
 
+createEndorsement("from", "text testing", "to")
+
 onValue(endorsementListDatabase, function (snapshot) {
     clearEndorsements()
     if (snapshot.exists()) {
