@@ -53,6 +53,8 @@ publishBtn.addEventListener("click", function () {
 onValue(endorsementListDatabase, function (snapshot) {
     if (snapshot.exists()) {
         endorsementArray = Object.entries(snapshot.val())
+        clearEndorsement()
+        renderEndorsement()
     } else {
         clearEndorsement()
 
@@ -64,14 +66,14 @@ onValue(endorsementListDatabase, function (snapshot) {
 })
 
 function renderEndorsement() {
-    clearEndorsement()
     let endorsementID = endorsementArray[currentIndex][0]
     let endorsementItems = endorsementArray[currentIndex][1]
 
-    return `<p>From ${endorsementItems[0]}</p>
+    endorsements.innerHTML = `<p>From ${endorsementItems[0]}</p>
     <p>${endorsementItems[1]}</p>
     <p>To ${endorsementItems[2]}</p>
     <p>ID: ${endorsementID} <i class="fas fa-heart"></i>${endorsementItems[3]}</p>`
+
 }
 
 function clearEndorsement() {
