@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -27,12 +27,12 @@ body {
     text-align: center;
     align-items: center;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .container .welcome-content img {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
 }
 
 .container .create-content {
@@ -64,7 +64,7 @@ body {
 }
 
 .container .create-content textarea {
-    height: 200px;
+    height: 150px;
 }
 
 .container .create-content .input-group {
@@ -91,6 +91,8 @@ body {
     color: white;
     text-align: center;
     font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .container .published-content .endorsements {
@@ -102,6 +104,17 @@ body {
     overflow: auto;
     box-sizing: border-box;
     border-radius: 10px;
+    height: 300px
+}
+
+.container .published-content button {
+    flex-grow: 1 0;
+    padding: 20px 0;
+    font-size: 18px;
+    background-color: #28a9f1;
+    color: #04131c;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
