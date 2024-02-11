@@ -69,15 +69,24 @@ function renderEndorsement() {
     let endorsementID = endorsementArray[currentIndex][0]
     let endorsementItems = endorsementArray[currentIndex][1]
 
-    endorsements.innerHTML = `<p>From ${endorsementItems[0]}</p>
-    <p>${endorsementItems[1]}</p>
-    <p>To ${endorsementItems[2]}</p>
-    <p>ID: ${endorsementID} <i class="fas fa-heart"></i>${endorsementItems[3]}</p>`
+    let from = document.createElement("p")
+    from.textContent = `From ${endorsementItems[0]}`
+    let text = document.createElement("p")
+    text.textContent = `From ${endorsementItems[1]}`
+    let to = document.createElement("p")
+    to.textContent = `From ${endorsementItems[2]}`
+    let likes = document.createElement("p")
+    likes.textContent = `ID: ${endorsementID} <i class="fas fa-heart"></i>${endorsementItems[3]}`
+
+    endorsements.append(from)
+    endorsements.append(text)
+    endorsements.append(to)
+    endorsements.append(likes)
 
 }
 
 function clearEndorsement() {
-    endorsements.innerHTML = ""
+    console.log("Removing nothing")
 }
 
 function getLikedEndorsement(e) {
