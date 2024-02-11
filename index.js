@@ -66,6 +66,7 @@ onValue(endorsementListDatabase, function (snapshot) {
 })
 
 function renderEndorsement() {
+    clearEndorsement()
     let endorsementID = endorsementArray[currentIndex][0]
     let endorsementItems = endorsementArray[currentIndex][1]
 
