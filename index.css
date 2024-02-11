@@ -94,34 +94,6 @@ body {
 }
 
 .container .published-content .endorsements {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.container .published-content ul {
-    list-style-type: none;
-    display: flex;
-    width: 100%;
-    padding-left: 0;
-    box-sizing: border-box;
-    gap: 10px;
-}
-
-#endorsements-list {
-    display: flex;
-    flex-wrap: nowrap;
-    min-width: 100%;
-}
-
-#endorsements-list li {
-    scroll-snap-align: start;
-    width: 100%;
-    flex: none;
-}
-
-.container .published-content ul li {
     background-color: white;
     color: #04131c;
     flex: 1;

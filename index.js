@@ -13,7 +13,7 @@ const textInput = document.getElementById("text-input")
 const fromInput = document.getElementById("from-input")
 const toInput = document.getElementById("to-input")
 const publishBtn = document.getElementById("publish-btn")
-const endorsementsList = document.getElementById("endorsements-list")
+const endorsements = document.querySelectorAll(".endorsements")
 
 publishBtn.addEventListener("click", function () {
     let text = textInput.value
@@ -38,11 +38,19 @@ onValue(endorsementListDatabase, function (snapshot) {
             let fromItem = endorsementItems[0]
             let textItem = endorsementItems[1]
             let toItem = endorsementItems[2]
-            createEndorsement(fromItem, textItem, toItem)
+            showEndorsement(fromItem, textItem, toItem)
         }
 
+        snapshot.addEventListener("click", function () {
+
+        })
+
+    } else {
+        endorsements.innerHTML = "No endorsements added"
     }
 })
+
+
 
 function clearInputFields(from, text, to) {
     text.textContent = ""
