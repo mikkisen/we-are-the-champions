@@ -45,7 +45,8 @@ onValue(endorsementListDatabase, function (snapshot) {
         })
 
     } else {
-        endorsements.innerHTML = "No endorsements added"
+        let noEndorsements = endorsements.createElement("p")
+        noEndorsements.textContent = "No endorsements added"
     }
 })
 
