@@ -27,7 +27,6 @@ publishBtn.addEventListener("click", function () {
 })
 
 onValue(endorsementListDatabase, function (snapshot) {
-    clearEndorsements()
     if (snapshot.exists()) {
         let endorsementArray = Object.entries(snapshot.val())
 
