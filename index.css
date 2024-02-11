@@ -94,11 +94,10 @@ body {
 }
 
 .container .published-content .endorsements {
-    display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .container .published-content ul {
