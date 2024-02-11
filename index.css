@@ -96,12 +96,11 @@ body {
 }
 
 .container .published-content .endorsements {
-    max-height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    overflow-y: scroll;
+    -ms-overflow-style: none;
 }
 
 .container .published-content .endorsements-list::-webkit-scrollbar {
