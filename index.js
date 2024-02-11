@@ -21,18 +21,23 @@ const endorsements = document.getElementById("endorsements")
 const backBtn = document.getElementById("back-btn")
 const nextBtn = document.getElementById("next-btn")
 
-backBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--
-        renderEndorsement()
+backBtn.addEventListener("click", (snapshot) => {
+    if (snapshot.exists()) {
+        if (currentIndex > 0) {
+            currentIndex--
+            renderEndorsement()
+        }
     }
 })
 
-nextBtn.addEventListener("click", () => {
-    if (currentIndex < items.length - 1) {
-        currentIndex++
-        renderEndorsement()
+nextBtn.addEventListener("click", (snapshot) => {
+    if (snapshot.exists()) {
+        if (currentIndex < endorsementArray.length - 1) {
+            currentIndex++
+            renderEndorsement()
+        }
     }
+
 })
 
 publishBtn.addEventListener("click", function () {
