@@ -95,6 +95,7 @@ body {
 
 .container .published-content .endorsements {
     display: flex;
+    max-height: 300px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
