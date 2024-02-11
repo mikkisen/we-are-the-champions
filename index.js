@@ -22,7 +22,7 @@ const backBtn = document.getElementById("back-btn")
 const nextBtn = document.getElementById("next-btn")
 
 backBtn.addEventListener("click", (snapshot) => {
-    if (snapshot.exists()) {
+    if (endorsementArray) {
         if (currentIndex > 0) {
             currentIndex--
             renderEndorsement()
@@ -31,7 +31,7 @@ backBtn.addEventListener("click", (snapshot) => {
 })
 
 nextBtn.addEventListener("click", (snapshot) => {
-    if (snapshot.exists()) {
+    if (endorsementArray) {
         if (currentIndex < endorsementArray.length - 1) {
             currentIndex++
             renderEndorsement()
