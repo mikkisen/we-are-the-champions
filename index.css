@@ -84,6 +84,7 @@ body {
     color: #04131c;
     border-radius: 10px;
     font-weight: bold;
+    border: none;
 }
 
 .container .published-content {
@@ -122,11 +123,12 @@ body {
     color: #04131c;
     border-radius: 10px;
     font-weight: bold;
+    border: none;
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 100%;
     }
 
     .container .create-content .input-group {
