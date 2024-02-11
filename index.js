@@ -67,7 +67,6 @@ onValue(endorsementListDatabase, function (snapshot) {
 
 function renderEndorsement() {
     clearEndorsement()
-    let endorsementID = endorsementArray[currentIndex][0]
     let endorsementItems = endorsementArray[currentIndex][1]
 
     let from = document.createElement("p")
@@ -77,7 +76,7 @@ function renderEndorsement() {
     let to = document.createElement("p")
     to.textContent = `From ${endorsementItems[2]}`
     let likes = document.createElement("p")
-    likes.textContent = `ID: ${endorsementID} <i class="fas fa-heart"></i>${endorsementItems[3]}`
+    likes.textContent = `❤️ ${endorsementItems[3]}`
 
     endorsements.append(from)
     endorsements.append(text)

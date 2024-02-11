@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
+    margin: 20px 0;
 }
 
 .container {
@@ -91,6 +92,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .container .published-content .endorsements {
