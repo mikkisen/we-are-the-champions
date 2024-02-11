@@ -6,7 +6,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
 }
@@ -27,7 +27,6 @@ body {
     text-align: center;
     align-items: center;
     color: white;
-    font-size: 18px;
 }
 
 .container .welcome-content img {
@@ -90,9 +89,8 @@ body {
     width: 100%;
     color: white;
     text-align: center;
-    font-size: 18px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .container .published-content .endorsements {
@@ -107,7 +105,12 @@ body {
     height: 300px
 }
 
-.container .published-content button {
+.container .published-content .button-group {
+    width: 100%;
+    display: flex;
+}
+
+.container .published-content .button-group button {
     flex-grow: 1 0;
     padding: 20px 0;
     font-size: 18px;
