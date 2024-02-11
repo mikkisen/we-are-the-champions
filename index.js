@@ -86,7 +86,7 @@ function renderEndorsement() {
 }
 
 function clearEndorsement() {
-    console.log("Removing nothing")
+    endorsements.innerHTML = ""
 }
 
 function getLikedEndorsement(e) {
