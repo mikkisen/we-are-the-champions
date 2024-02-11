@@ -13,7 +13,7 @@ const textInput = document.getElementById("text-input")
 const fromInput = document.getElementById("from-input")
 const toInput = document.getElementById("to-input")
 const publishBtn = document.getElementById("publish-btn")
-const endorsements = document.qetElementByID("endorsements")
+const endorsements = document.getElementById("endorsements")
 
 publishBtn.addEventListener("click", function () {
     let text = textInput.value
